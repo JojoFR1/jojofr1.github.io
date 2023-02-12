@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Jojo Incredible thingy</title>
-  </head>
-  <body style="background-color:black;">
-    <h1 style="color:#ffffff;">Hola in da Jojo's Website</h1>
-    <p1 style="color:#ffffff;">Soon soon™</p1>
-  </body>
+<html lang="fr">
+<head>
+    <title>Jojo's Website</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="band"><style>#band {width:100%;height:50px;background:deepskyblue}</style></div>
+
+    <button class="toggle-mode-button" onclick="darkMode()"><img id="toggle-mode-image" src="assets/light-mode-toggle-icon.png" width="60" height="30"></button>
+    <script>
+        function darkMode(){
+            var element = document.body;
+            var image = document.getElementById("toggle-mode-image")
+            element.classList.toggle("dark-mode");
+
+            if (image.src.match("assets/light-mode-toggle-icon.png")) {
+                image.src = "assets/dark-mode-toggle-icon.png";
+            }
+            else {
+                image.src = "assets/light-mode-toggle-icon.png"
+            }
+        }
+    </script>
+</body>
 </html>
